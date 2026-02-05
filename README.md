@@ -1,4 +1,4 @@
-Create README.md and paste this 👇
+
 
 📊 Sorting Algorithm Visualizer
 
