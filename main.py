@@ -26,3 +26,27 @@ print("\nBubble sort visualization:")
 steps = bubble_sort(arr.copy())
 print("Sorted result:", arr)
 print("Total swaps:", steps)
+def selection_sort(arr):
+    n = len(arr)
+    steps = 0
+
+    for i in range(n):
+        min_index = i
+
+        for j in range(i+1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        if min_index != i:
+            arr[i], arr[min_index] = arr[min_index], arr[i]
+            steps += 1
+            print("Step:", arr)
+            time.sleep(0.5)
+
+    return steps
+arr2 = generate_list()
+print("\nNew list for selection sort:", arr2)
+print("Selection sort visualization:")
+steps2 = selection_sort(arr2.copy())
+print("Sorted result:", arr2)
+print("Total swaps:", steps2)
