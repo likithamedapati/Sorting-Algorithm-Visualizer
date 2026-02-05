@@ -50,3 +50,26 @@ print("Selection sort visualization:")
 steps2 = selection_sort(arr2.copy())
 print("Sorted result:", arr2)
 print("Total swaps:", steps2)
+def insertion_sort(arr):
+    steps = 0
+
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+
+        while j >= 0 and arr[j] > key:
+            arr[j+1] = arr[j]
+            j -= 1
+            steps += 1
+            print("Step:", arr)
+            time.sleep(0.5)
+
+        arr[j+1] = key
+
+    return steps
+arr3 = generate_list()
+print("\nNew list for insertion sort:", arr3)
+print("Insertion sort visualization:")
+steps3 = insertion_sort(arr3.copy())
+print("Sorted result:", arr3)
+print("Total shifts:", steps3)
